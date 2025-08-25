@@ -171,6 +171,7 @@ vim.o.tabstop = 4 -- set tab to 4 spaces
 vim.o.expandtab = true -- set tab to enter spaces instead of indent
 vim.o.softtabstop = 4 -- Number of spaces inserted instead of a TAB character
 vim.o.shiftwidth = 4 -- Number of spaces inserted when indenting with commands like >> or ==
+vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename, { desc = 'Rename using LSP' })
 -- NOTE  End of my custom config
 
 -- [[ Basic Keymaps ]]
@@ -683,6 +684,31 @@ require('lazy').setup({
         gopls = {},
         pyright = {},
         intelephense = {},
+        phpactor = {
+          capabilities = {
+            codeLens = {
+              enabled = false,
+            },
+            completion = {
+              enable = false,
+            },
+            diagnostics = {
+              enable = false,
+            },
+            format = {
+              enable = false,
+            },
+            hint = {
+              enable = false,
+            },
+            hover = {
+              enable = false,
+            },
+            semantic = {
+              enable = false,
+            },
+          },
+        },
         cssls = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
