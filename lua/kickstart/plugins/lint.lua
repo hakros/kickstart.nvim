@@ -7,7 +7,7 @@ return {
       local lint = require 'lint'
       lint.linters_by_ft = {
         markdown = { 'markdownlint' },
-        php = { 'phpcs', 'phpstan' },
+        php = { 'phpstan' },
         js = { 'eslint_d' },
         html = { 'htmlhint' },
         css = { 'stylelint' },
